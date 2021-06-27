@@ -5,7 +5,7 @@ inherit_from:
 AllCops:
   NewCops: enable
 
-RSpec:
+RSpec/Rails:
   Exclude:
     - test/**/*_test.rb
 
