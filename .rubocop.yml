@@ -1,0 +1,11 @@
+inherit_from:
+  - ./.rubocop-rspec.yml
+  - ./.rubocop-minitest.yml
+
+AllCops:
+  NewCops: enable
+
+RSpec:
+  Exclude:
+    - test/**/*_test.rb
+

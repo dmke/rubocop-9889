@@ -1,0 +1,6 @@
+require:
+  - rubocop-rspec
+
+RSpec/Rails/AvoidSetupHook:
+  Enabled: true
+
