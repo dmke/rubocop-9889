@@ -1,11 +1,21 @@
 # frozen-string-literal: true
 
-class UserTest < ActiveSupport::TestCase
-  setup do
-    @user = FactoryBot.create :user
-  end
+require 'test_helper'
 
-  shoould 'not be confirmed' do
-    assert_not @user.confirmed?
+User = Struct.new(:confirmed_at) do
+  def confirmed?
+    !confirmed_at.nil?
+  end
+end
+
+class UserTest < Minitest::Test
+  context 'a user' do
+    setup do
+      @user = User.new
+    end
+
+    should 'not be confirmed' do
+      assert_not @user.confirmed?
+    end
   end
 end
